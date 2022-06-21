@@ -1,3 +1,7 @@
+# install
+```pip install git+https://github.com/shuennhauc/appscript_msg```
+
+
 # Getting started
 ```
 # import
