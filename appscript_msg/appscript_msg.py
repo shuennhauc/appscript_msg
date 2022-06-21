@@ -18,7 +18,7 @@ class Message:
             to_recipient (list): list of email address to send
             cc_recipient (list): list of email address to cc
             attachments (list): list absolute path to attachments
-            send_type (str): 'show' will open the email message for preview; 'send' will send without preview
+            send_type (str): Defaults to 'show'. 'show' will open the email message for preview; 'send' will send without preview
             
         """
         self.create_msg(subject, body)
