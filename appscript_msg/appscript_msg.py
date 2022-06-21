@@ -11,7 +11,7 @@ class Message:
     def __init__(self):
         self.outlook = app('Microsoft Outlook')
     
-    def create_email(self, subject, body, to_recipients=[], cc_recipients=[], attachments=None, send_type='show', pause_confirm=True, send_delay=1):      
+    def create_email(self, subject:str, body:str, to_recipients=[], cc_recipients=[], attachments=None, send_type='show', pause_confirm=True, send_delay=1):      
         """
         Args:
             subject (str): the email subject.
