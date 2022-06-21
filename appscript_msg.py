@@ -4,9 +4,6 @@
 
 from appscript import app, k #pip install
 from mactypes import Alias
-from pathlib import Path
-import os
-import pandas as pd #pip install
 
 class Message:
 
