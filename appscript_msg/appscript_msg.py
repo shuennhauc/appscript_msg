@@ -7,9 +7,20 @@ from mactypes import Alias
 
 class Message:
 
-    def __init__(self, subject, body, to_recipients=[], cc_recipients=[], attachments=None, send_type='Show'):
+    def __init__(self:
         self.outlook = app('Microsoft Outlook')
-
+    
+    def create_email(self, subject, body, to_recipients=[], cc_recipients=[], attachments=None, send_type='show'):      
+        """
+        Args:
+            subject (str): the email subject.
+            body (str): the email body.
+            to_recipient (list): list of email address to send
+            cc_recipient (list): list of email address to cc
+            attachments (list): list absolute path to attachments
+            send_type (str): 'show' will open the email message for preview; 'send' will send without preview
+            
+        """
         self.create_msg(subject, body)
 
         self.add_recipient_list(to_recipients, type_ = 'to')
