@@ -2,7 +2,7 @@
 # https://appscript.sourceforge.io/py-appscript/index.html
 
 
-from appscript import app, k #pip install
+from appscript import app, k 
 from mactypes import Alias
 
 class Message:
