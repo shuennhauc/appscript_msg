@@ -4,13 +4,14 @@
 
 from appscript import app, k 
 from mactypes import Alias
+from time import sleep
 
 class Message:
 
     def __init__(self):
         self.outlook = app('Microsoft Outlook')
     
-    def create_email(self, subject, body, to_recipients=[], cc_recipients=[], attachments=None, send_type='show'):      
+    def create_email(self, subject, body, to_recipients=[], cc_recipients=[], attachments=None, send_type='show', pause_confirm=True, send_delay=1):      
         """
         Args:
             subject (str): the email subject.
@@ -30,8 +31,22 @@ class Message:
 
         if send_type=='show':
             self.msg.open()
+            
+            if not isinstance(pause_confirm, bool):
+                raise ValueError("pause_confirm only accepts booleans")
+            
+            if pause_confirm:
+                input('Press any key to continue')
+                
+            
         elif send_type=='send':
             self.msg.send()
+                   
+            if not isinstance(send_delay, float):
+                raise ValueError("Assign send_delay as a float")
+            
+            sleep(send_delay)
+            
         else:
             raise ValueError('send_type only accepts "show" or "send"')
 
