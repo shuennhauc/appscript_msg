@@ -1,4 +1,6 @@
 # https://stackoverflow.com/questions/61529817/automate-outlook-on-mac-with-python
+# https://appscript.sourceforge.io/py-appscript/index.html
+
 
 from appscript import app, k #pip install
 from mactypes import Alias
