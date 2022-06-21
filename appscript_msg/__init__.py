@@ -1,1 +1,1 @@
-from appscript_msg import appscript_msg
+import appscript_msg.appscript_msg as appscript_msg
