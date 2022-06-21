@@ -7,7 +7,7 @@ from mactypes import Alias
 
 class Message:
 
-    def __init__(self:
+    def __init__(self):
         self.outlook = app('Microsoft Outlook')
     
     def create_email(self, subject, body, to_recipients=[], cc_recipients=[], attachments=None, send_type='show'):      
