@@ -8,7 +8,7 @@ setup(
     url='https://github.com/shuennhauc/appscript_msg',
     author='Shuennhau Chang',
     author_email='shuennhauc@gmail.com',
-
+    packages=['appscript_msg'],
     install_requires=['appscript']
   
 )
